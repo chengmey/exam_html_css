@@ -1,0 +1,343 @@
+/* Контейнер для кнопки, чтобы не прыгал контент, когда она сменит позиционирование */
+
+.css-modal-details2 {
+    height: 60px;
+}
+
+/* Кнопка для открытия */
+.css-modal-details summary,
+.css-modal-details2 summary {
+    display: inline-flex;
+    
+    text-decoration: none;
+    
+    position: relative;
+    
+    line-height: 20px;
+    
+    padding: 20px 50px;
+    
+    color: #1773BA;
+    
+    cursor: pointer;
+    
+    border: 1px solid #1773BA;
+    border-radius: 4px;
+    
+    overflow: hidden;
+    
+    z-index: 1;
+}
+
+.css-modal-details2 summary {
+    color: white;
+    
+    border: 0;
+    
+    background: #1773BA;
+}
+
+.css-modal-details summary p,
+.css-modal-details2 summary p {
+    margin: 0;
+    
+    width: 135px;
+}
+
+.css-modal-details summary:before,
+.css-modal-details2 summary:before {
+    position: absolute;
+}
+
+.css-modal-details summary:hover:before,
+.css-modal-details summary:active:before,
+.css-modal-details summary:focus:before,
+.css-modal-details2 summary:hover:before,
+.css-modal-details2 summary:active:before,
+.css-modal-details2 summary:focus:before {
+    transform: translateX(0);
+}
+
+/* Кнопка при открытом окне переходит на весь экран */
+.css-modal-details details[open] summary,
+.css-modal-details2 details[open] summary {
+    cursor: default;
+    
+    opacity: 0;
+    
+    position: fixed;
+    
+    left: 0;
+    
+    top: 0;
+    
+    z-index: 3;
+    
+    width: 100%;
+    
+    height: 100%;
+}
+
+/* Контейнер, который затемняет страницу */
+.css-modal-details details .cmc,
+.css-modal-details2 details .cmc {
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+}
+
+.css-modal-details details[open] .cmc,
+.css-modal-details2 details[open] .cmc {
+    pointer-events: none;
+    
+    z-index: 4;
+    
+    position: fixed;
+    
+    left: 0;
+    
+    top: 0;
+    
+    width: 100%;
+    
+    height: 100%;
+    
+    animation: bg 0.5s ease;
+    
+    background: #00000099;
+}
+
+/* Модальное окно */
+.css-modal-details details .cmt,
+.css-modal-details2 details .cmt {
+    font-size: 16px;
+    
+    padding: 40px;
+    
+    width: 400px;
+    
+    border-radius: 10px;
+    
+    background: #FFF;
+}
+
+.css-modal-details details[open] .cmt,
+.css-modal-details2 details[open] .cmt {
+    animation: scale 0.5s ease;
+    
+    z-index: 4;
+    
+    pointer-events: auto;
+}
+
+/* Декоративная кнопка с крестиком */
+.css-modal-details details[open] .cmc:after,
+.css-modal-details2 details[open] .cmc:after {
+    content: "";
+    
+    width: 50px;
+    
+    height: 50px;
+    
+    position: absolute;
+    
+    z-index: 10;
+    
+    top: 50px;
+    
+    right: 100px;
+    
+    background-image: url("Кнопка закрыть.png");
+    background-size: cover;
+}
+
+header,
+.header_section {
+    width: 60%;
+    
+    margin: auto;
+}
+
+.header .header_section {
+    position: relative;
+}
+.header .header_section img{
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+}
+
+.header section p:nth-child(1):not(.css-modal-details p, .css-modal-details2 p) {
+    font-size: 14px;
+
+    color: #717171;
+}
+
+.header section p:nth-child(3) {
+    width: 400px;
+
+}
+
+.header section h1 {
+    width: 540px;
+}
+
+.header section div:not(.css-modal-details2, .cmc, .cmt) {
+    padding: 135px 0 231px 0;
+}
+
+.advantages {
+    background: #1773BA;
+    
+    width: 100%;
+}
+
+.advantages div:not(.advantages section div) {
+    width: 60%;
+    
+    padding: 150px 0;
+    
+    margin: auto;
+}
+
+.advantages h2 {
+    color: white;
+    
+    text-align: center;
+    
+    margin: 0 0 80px 0;
+}
+
+.advantages main {
+    display: grid;
+    
+    row-gap: 8%;
+    
+    column-gap: 5%;
+    
+    grid-template-columns: 47.5% 47.5%;
+}
+
+.advantages section {
+    background: white;
+    
+    border-radius: 10px;
+    
+    padding: 64px 0;
+}
+
+.advantages section p {
+    max-width: 377px;
+    
+    font-size: 16px;
+    
+    text-align: center;
+    
+    margin: auto;
+}
+
+.advantages section h3 {
+    text-align: center;
+}
+
+.examples div:not(.examples section div) {
+    width: 60%;
+    
+    padding: 150px 0;
+    
+    margin: auto;
+}
+
+.examples h2 {
+    text-align: center;
+    
+    margin: 0 0 80px 0;
+}
+
+.examples main {
+    display: grid;
+    
+    column-gap: 5%;
+    
+    grid-template-columns: 31.6% 31.6% 31.6%;
+}
+
+.examples section {
+    padding: 50px 30px;
+    
+    border: 0.5px solid #EBEDEE;
+    border-radius: 10px;
+}
+
+.examples section p,
+.examples section h3,
+.examples section h4 {
+    margin: auto;
+}
+
+.examples section h3 {
+    margin-bottom: 15px;
+}
+
+.examples section h4 {
+    margin-bottom: 32px;
+}
+
+.customers {
+    background: #1773BA;
+}
+
+.customers section {
+    width: 60%;
+    
+    padding: 150px 0;
+    
+    margin: auto;
+}
+
+.customers h2 {
+    color: white;
+    
+    text-align: center;
+    
+    margin: 0 0 80px 0;
+}
+
+.customers section div {
+    display: flex;
+    
+    gap: 2%;
+}
+
+.customers figure {
+    margin: 0;
+    
+    width: 16.3%;
+}
+
+.customers figure img {
+    width: 100%;
+}
+
+.cmt form #submit {
+    width: 400px;
+
+    color: white;
+    
+    background: #1773BA;
+    
+    font-weight: bold;
+    
+    text-align: center;
+    
+    border: 0;
+    border-radius: 4px;
+}
+
+.cmt form .here {
+    width: 390px;
+}

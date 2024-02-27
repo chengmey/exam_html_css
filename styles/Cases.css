@@ -1,0 +1,229 @@
+/* Контейнер для кнопки, чтобы не прыгал контент, когда она сменит позиционирование */
+
+.css-modal-details2 {
+    height: 60px;
+}
+
+/* Кнопка для открытия */
+.css-modal-details summary,
+.css-modal-details2 summary {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    line-height: 20px;
+    padding: 20px 50px;
+    color: #1773BA;
+    cursor: pointer;
+    border: 1px solid #1773BA;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.css-modal-details2 summary {
+    color: white;
+    border: 0;
+    background: #1773BA;
+}
+
+.css-modal-details summary p {
+    margin: 0;
+    width: 135px;
+}
+
+.css-modal-details2 summary p {
+    margin: 0;
+}
+
+.css-modal-details summary:before,
+.css-modal-details2 summary:before {
+    position: absolute;
+}
+
+.css-modal-details summary:hover:before,
+.css-modal-details summary:active:before,
+.css-modal-details summary:focus:before,
+.css-modal-details2 summary:hover:before,
+.css-modal-details2 summary:active:before,
+.css-modal-details2 summary:focus:before {
+    transform: translateX(0);
+}
+
+/* Кнопка при открытом окне переходит на весь экран */
+.css-modal-details details[open] summary,
+.css-modal-details2 details[open] summary {
+    cursor: default;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+/* Контейнер, который затемняет страницу */
+.css-modal-details details .cmc,
+.css-modal-details2 details .cmc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.css-modal-details details[open] .cmc,
+.css-modal-details2 details[open] .cmc {
+    pointer-events: none;
+    z-index: 4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: bg 0.5s ease;
+    background: #00000099;
+}
+
+/* Модальное окно */
+.css-modal-details details .cmt {
+    font-size: 16px;
+    padding: 40px;
+    width: 400px;
+    border-radius: 10px;
+    background: #FFF;
+}
+
+.case1 .css-modal-details2 .cmt section{
+    background-image: url("телеофоныформа.png");
+    background-repeat: no-repeat;
+}
+.case2 .css-modal-details2 .cmt section{
+    background-image: url("форма2.png");
+    background-repeat: no-repeat;
+}
+.case3 .css-modal-details2 .cmt section{
+    background-image: url("форма.png");
+    background-repeat: no-repeat;
+}
+
+.css-modal-details2 details .cmt section {
+    width: 400px;
+    border-radius: 10px;
+    padding: 250px 40px 20px;
+    background: #FFF;
+    text-align: center;
+}
+
+
+.css-modal-details details[open] .cmt,
+.css-modal-details2 details[open] .cmt {
+    animation: scale 0.5s ease;
+
+    z-index: 4;
+
+    pointer-events: auto;
+
+    position: relative;
+}
+
+.css-modal-details2 .cmt section h3,
+.css-modal-details2 .cmt section p:not(.cmt section form p) {
+    margin: 0 0 36px;
+}
+
+.css-modal-details2 details[open] .cmt img{
+    position: absolute;
+
+    top: 0;
+
+    width: 480px;
+}
+
+.cases {
+    background: #1773BA;
+    width: 100%;
+}
+
+.cases main:not(main main) {
+    width: 60%;
+    padding: 150px 0;
+    margin: auto;
+    display: grid;
+    gap: 100px;
+}
+
+.cases main h2 {
+    color: white;
+}
+
+.cases main main {
+    display: flex;
+    align-items: center;
+}
+
+.cases figure {
+    margin: 0;
+}
+
+.cases main main section {
+    background: white;
+    border-radius: 10px;
+}
+
+.cases li {
+    list-style: none;
+    padding-bottom: 18px;
+}
+
+.cases ol {
+    padding: 0;
+    display: grid;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cases ol span {
+    color: #1773BA;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.cases section input:not(.cmt input:not(.cmt #submit)) {
+    width: 255px;
+    color: white;
+    background: #1773BA;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.cases section section div:nth-child(2) {
+    margin: auto;
+}
+
+.cases section section:not(.cmt section) {
+    display: grid;
+    gap: 22px;
+    padding: 65px 0;
+}
+
+.cases section section div:nth-child(1):not(.css-modal-details2 details .cmt) {
+    padding: 0 55px;
+}
+
+.cases section main figure {
+    width: 45%;
+}
+
+.cases section main section:not(.cmt section) {
+    width: 55%;
+}
+
+.cases section main figure img {
+    width: 100%;
+}
+
+.cases h3 {
+    margin-top: 0;
+}

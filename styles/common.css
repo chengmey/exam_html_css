@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Контейнер для кнопки, чтобы не прыгал контент, когда она сменит позиционирование */
+.css-modal-details {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Кнопка для открытия */
+.css-modal-details summary {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    line-height: 20px;
+    padding: 20px 50px;
+    color: #1773BA;
+    cursor: pointer;
+    border: 1px solid #1773BA;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.css-modal-details summary p {
+    margin: 0;
+    width: 135px;
+}
+
+.css-modal-details summary:before {
+    position: absolute;
+}
+
+.css-modal-details summary:hover:before,
+.css-modal-details summary:active:before,
+.css-modal-details summary:focus:before {
+    transform: translateX(0);
+}
+
+/* Кнопка при открытом окне переходит на весь экран */
+.css-modal-details details[open] summary {
+    cursor: default;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+/* Контейнер, который затемняет страницу */
+.css-modal-details details .cmc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.css-modal-details details[open] .cmc {
+    pointer-events: none;
+    z-index: 4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: bg 0.5s ease;
+    background: #00000099;
+}
+.css-modal-details details[open] .cmc img,
+.css-modal-details2 details[open] .cmc img:not(.css-modal-details2 details[open] .cmt img){
+    position: absolute;
+
+    z-index: 10;
+
+    top: 50px;
+
+    right: 100px;
+}
+
+/* Модальное окно */
+.css-modal-details details .cmt {
+    font-size: 16px;
+
+    padding: 40px;
+
+    width: 400px;
+
+    border-radius: 10px;
+
+    background: #FFF;
+}
+
+.css-modal-details details[open] .cmt {
+    animation: scale 0.5s ease;
+
+    z-index: 4;
+
+    pointer-events: auto;
+}
+
+.cmt section {
+    width: 400px;
+
+    text-align: center;
+}
+
+.cmt section form p:not(.here) {
+    text-align: start;
+}
+
+.cmt section h3,
+.cmt section p:not(.cmt section form p) {
+    margin: 0 0 36px;
+}
+
+
+/* Анимации */
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bg {
+    0% {
+        background: #717171;
+    }
+
+    100% {
+        background: #717171;
+    }
+}
+
+.cmt form #submit {
+    width: 400px;
+
+    color: white;
+
+    background: #1773BA;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    border: 0;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+
+    color: black;
+}
+
+header nav a {
+    white-space: nowrap;
+}
+
+.here a {
+    color: #1773BA;
+}
+
+.language a {
+    color: #717171;
+}
+
+header {
+    width: 60%;
+
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+}
+
+.header .logo,
+.header nav,
+.header header {
+    display: flex;
+}
+
+.cmt form #input {
+    background: #f3f3f3;
+
+    border: 0;
+    border-radius: 4px;
+
+    width: 360px;
+
+    padding: 20px;
+
+    font-size: 16px;
+}
+
+.cmt form p {
+    color: black;
+}
+
+.cmt form #submit {
+    padding: 20px;
+}
+
+
+.logo p {
+    width: 137.4px;
+
+    padding-left: 5px;
+}
+
+.logo img {
+    width: 34px;
+
+    height: 34px;
+}
+
+header .logo {
+    width: 57%;
+
+    align-items: center;
+}
+
+header nav {
+    width: 43%;
+
+    gap: 5%;
+
+    align-items: center;
+}
+
+
+
+
+
+.form{
+    width: 100%;
+}
+.form div {
+    width: 60%;
+
+    padding: 150px 0;
+
+    margin: auto;
+}
+.form form{
+    width: 100%;
+}
+
+.form h2,
+.form h3 {
+    text-align: center;
+
+    margin: 0 0 80px 0;
+}
+
+.form h3 {
+    width: 394px;
+
+    font-weight: normal;
+
+    margin: 0 auto 50px;
+}
+
+.form main {
+    display: flex;
+
+    gap: 10%;
+}
+
+.form section form input {
+    background: #f3f3f3;
+
+    border: 0;
+    border-radius: 4px;
+
+    width: 360px;
+
+    padding: 20px;
+
+    font-size: 16px;
+}
+
+.form section form #submit {
+    width: 400px;
+
+    color: white;
+
+    background: #1773BA;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    border: 0;
+    border-radius: 4px;
+}
+
+.form section form .here {
+    width: 390px;
+}
+
+.form section:nth-child(1) p {
+    border-bottom: 0.5px solid black;
+
+    padding-bottom: 10px;
+
+    max-width: 340px;
+}
+
+.form section:nth-child(1) {
+    padding: 226px 0 226px 65px;
+
+    width: 40%;
+}
+
+.form section:nth-child(2) {
+    padding: 65px 85px 65px 0;
+
+    width: 30%;
+
+    max-width: 400px;
+}
+
+
+
+
+
+.footer {
+    background: #1773BA;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+}
+
+.footer p {
+    margin: 0;
+}

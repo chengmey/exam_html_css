@@ -1,0 +1,39 @@
+.competencies {
+    background: #1773BA;
+}
+
+.competencies div:not(.competencies section div) {
+    width: 60%;
+    padding: 150px 0;
+    margin: auto;
+}
+
+.competencies h2 {
+    color: white;
+    text-align: center;
+    margin: 0 0 80px 0;
+}
+
+.competencies main {
+    display: grid;
+    gap: 80px;
+}
+
+.competencies section {
+    background: white;
+    border-radius: 10px;
+    padding: 40px 60px;
+    display: flex;
+    gap: 5%;
+}
+
+.competencies li {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.competencies ol {
+    padding: 0;
+    display: grid;
+    gap: 5px;
+}
